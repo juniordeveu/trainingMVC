@@ -1,11 +1,13 @@
+
+
 let portfolio = ( req, res ) => {
-    res.send( "portfolio" );
+    res.render( 'portfolio.ejs' );
     return res.end();
 }
 
 
 let contact =  ( req, res ) => {
-    res.send( "contact" );
+    res.render( 'contact.ejs' );
     return res.end();
 }
 

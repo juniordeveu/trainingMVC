@@ -1,6 +1,6 @@
 const error404 = ( req, res ) =>{
     res.statusCode = 404;
-    res.send( "Error" );
+    res.render( 'error404.ejs' );
     return res.end();
 } 
 

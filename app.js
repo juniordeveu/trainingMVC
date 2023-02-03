@@ -1,15 +1,23 @@
 const { config } = require( './config/config' );
 const { error404 } = require( './controllers/error' );
-const {  contact } = require( './controllers/portfolio' );
+
+
 /* route */
 const routesPortfolio = require( './routes/portfolio' );
 const routeContact = require( './routes/contacts' );
-const bodyParser = require( 'body-parser' );
+/* end Route */
 
+const bodyParser = require( 'body-parser' );
+const path = require( 'path' );
 
 const express = require( 'express' );
 const app = express();
 
+app.set( 'view engine', 'ejs' )
+app.set( 'views', 'views' )
+
+/* middleware */
+app.use( express.static( path.join( __dirname, 'public' ) ));
 app.use( bodyParser.urlencoded({ extended:false }) );
 
 app.use( routeContact )
