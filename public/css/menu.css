@@ -1,0 +1,258 @@
+/* 
+font-family: 'Fredoka One', cursive;
+font-family: 'Michroma', sans-serif;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+font-family: 'Saira Condensed', sans-serif;
+font-family: 'Unbounded', cursive;
+
+font-family: 'Fredoka One', cursive;
+font-family: 'Michroma', sans-serif;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+font-family: 'Saira Condensed', sans-serif;
+font-family: 'Unbounded', cursive;
+
+*/
+
+
+*{
+    box-sizing:     border-box;
+    font-size:      20px;
+    font-family:    'Poppins', sans-serif;
+    margin:         0;
+    padding:        0;
+}
+
+h1{
+    color: blue;
+}
+/* menu */
+.container-menu{
+    display:    flex;
+        flex-flow:      column nowrap;
+        -ms-flex-flow:  column nowrap;
+}
+.box-upper{
+    text-align:         center;  
+}
+.box-upper--txt{
+    background-color:   rgb(112, 188, 255); ;
+    color:              white;
+    font-size:          .7rem;
+    letter-spacing:     .4rem;
+}
+
+/* svg */
+.svg-triangle{
+    fill:               rgb(112, 188, 255);
+}
+
+
+/* nav */
+.nav{  
+    display:    flex;
+        flex-flow:          row wrap;
+        -ms-flex-flow:      row wrap;
+        justify-content:    space-between;
+}
+/* logo txt */
+.nav-logo{
+}
+.nav__logo--p{
+    font-family:        'Paytone One', sans-serif;
+    letter-spacing:     .1rem;
+    padding:            1rem;
+}
+.nav__logo--span{
+    color:          orangered;
+    font-family:    'Paytone One', sans-serif;
+    font-weight:    bold;
+}
+
+/* nav-list */
+.nav-list{
+    display:    flex;
+        flex-flow:          row nowrap;
+        -ms-flex-flow:      row nowrap;
+        align-items:        center;
+        -ms-flex-align:     center;
+        justify-content:    end;
+    list-style:     none;  
+}
+.nav-list__items--item{
+    color:              black;
+    margin:             1rem;
+    padding:            1rem;
+    text-decoration:    none;   
+}
+
+
+/* hamburger */
+#hamburgerIcon, label[for="hamburgerIcon"] {
+    display:        none;
+}
+
+label[for="hamburgerIcon"]{
+    color:      rgb(255, 64, 0);
+    position:   fixed;
+        right:  1rem;
+    z-index:    999;
+}
+
+.fa-burger{
+    animation:  iconHamAnim 2s forwards linear;
+    font-size:  2rem;
+}
+@keyframes iconHamAnim {
+    0%{
+        transform: translateY( -1rem );
+    }
+    10%{
+        transform: translateY( 0rem );
+        rotate: 2deg;
+        transform: scaleY( 1.3 );
+    }
+    20%{
+        transform: translateY( -.5rem );
+    }
+    30%{
+        transform: translateY( 0rem );
+        rotate: -2deg;
+        transform: scaleY( 1.1 );
+    }
+    40%{
+        transform: translateY( -.3rem );
+    }
+    50%{
+        transform: translateY( 0rem );
+    }
+
+}
+.fa-burger:hover{
+    animation:      clickHambAnim 1s forwards;
+}
+@keyframes clickHambAnim {
+    0%{
+       color:     rgb(255, 8, 0);
+    }
+}
+
+.hamburger{
+        display:    flex;
+        align-items:    center;
+    margin-right:   1rem;
+}
+
+.menuHam{
+    animation:      backAnim 10s infinite;
+    background:     linear-gradient(45deg, rgb(255, 255, 255) 0% , rgb(4, 35, 50) 100%);
+        display:    flex;
+            justify-content:    start;
+            align-items:        start;
+    height:         70%;
+    position:       fixed;
+        top:    0;
+        left:   0;
+    transition:     1s  ease-in;
+    transform:      translate(-100%);
+    width:          100%;
+    visibility:     hidden;
+    z-index:        998;
+    background-size:400% 400%;
+}
+@keyframes backAnim {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+    
+}
+.hamburegerList{
+    display:        flex;
+        flex-flow:          column nowrap;
+        justify-content:    space-around;
+    margin:         0 2rem 0 2rem;
+    height:         50%;
+    padding:        1rem; 
+}
+.hamburegerList__items{
+    animation:      showTxt 3s forwards;
+    opacity: 0;
+}
+@keyframes showTxt {
+    0%{
+       opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.hamburegerList__items:nth-child(0){
+    animation-delay: 1s;
+}
+.hamburegerList__items:nth-child(1){
+    animation-delay: 1.5s;
+}
+.hamburegerList__items:nth-child(2){
+    animation-delay: 2s;
+}
+.hamburegerList__items:nth-child(3){
+    animation-delay: 2.5s;
+}
+.hamburegerList__items:nth-child(4){
+    animation-delay: 3s;
+}
+.hamburegerList__items:nth-child(5){
+    animation-delay: 3.5s;
+}
+
+.hamburegerList__items{
+    cursor:         pointer;
+    list-style:     none;  
+}
+.hamburegerList__items--item{
+    color:              rgb(255, 255, 255);
+    font-size:          5vmin;
+    font-family:        'Paytone One', sans-serif;
+    text-decoration:    none; 
+    white-space:        nowrap;  
+}
+.hamburegerList__items--item:hover{
+    color:          orangered;
+    transition:     .5s ease;
+}
+
+#hamburgerIcon:checked + label{
+    background-color:       transparent;
+}
+#hamburgerIcon:checked ~.menuHam{
+    transform:      translate(0px);
+    visibility:     visible;
+}
+
+/* end */
+
+/* media */
+@media all and (min-width: 0px) and (max-width: 1200px){
+    .nav-list{
+        display:    none;
+    }
+    label[for="hamburgerIcon"]{
+        display:    block;
+    }
+
+}
+@media all and (width > 1200px){
+   
+    .menuHam{
+        display:    none;
+    }
+}
