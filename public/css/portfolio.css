@@ -122,12 +122,6 @@
 
 /* ---------------------------------------------------------------------------------------------- */
 
-/* section number two */
-.largeTwo{
-
-    height: 80vh;
-
-}
 
 
 /* media------------------------------------------------------------------------------------------ */
@@ -173,4 +167,30 @@
        
         font-size:      1.5rem;
     }
+}
+
+
+/*--------section number two-------------------------------------------- */
+.largeTwo{
+ height: 80vh;
+ opacity: 0;
+}
+/* show section */
+.showSection{
+    opacity: 1;
+    transition: 2s ease;
+}
+/* ------------- */
+.boxInfo{
+
+    border: 1px rgb(0, 157, 255) solid;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+
+}
+.boxInfo-h1{
+    color: rgb(49, 32, 62);
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+
 }
