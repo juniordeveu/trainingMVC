@@ -21,13 +21,9 @@ font-family: 'Unbounded', cursive;
 *{
     box-sizing:     border-box;
     font-size:      20px;
-    font-family:    'Poppins', sans-serif;
+    font-family: 'Michroma', sans-serif;
     margin:         0;
     padding:        0;
-}
-
-h1{
-    color: blue;
 }
 /* menu */
 .container-menu{
@@ -39,7 +35,7 @@ h1{
     text-align:         center;  
 }
 .box-upper--txt{
-    background-color:   rgb(112, 188, 255); ;
+    background-color:   #8edfff ;
     color:              white;
     font-size:          .7rem;
     letter-spacing:     .4rem;
@@ -47,7 +43,7 @@ h1{
 
 /* svg */
 .svg-triangle{
-    fill:               rgb(112, 188, 255);
+    fill:               #8edfff;
 }
 
 
@@ -62,13 +58,13 @@ h1{
 .nav-logo{
 }
 .nav__logo--p{
-    font-family:        'Paytone One', sans-serif;
+    font-family:        'Michroma', sans-serif;
     letter-spacing:     .1rem;
     padding:            1rem;
 }
 .nav__logo--span{
     color:          orangered;
-    font-family:    'Paytone One', sans-serif;
+    font-family:    'Michroma', sans-serif;
     font-weight:    bold;
 }
 
@@ -98,7 +94,7 @@ h1{
 label[for="hamburgerIcon"]{
     color:      rgb(255, 64, 0);
     position:   fixed;
-        right:  1rem;
+        right:  .5rem;
     z-index:    999;
 }
 
@@ -190,9 +186,11 @@ label[for="hamburgerIcon"]{
 @keyframes showTxt {
     0%{
        opacity: 0;
+        
     }
     100%{
         opacity: 1;
+      
     }
 }
 .hamburegerList__items:nth-child(0){

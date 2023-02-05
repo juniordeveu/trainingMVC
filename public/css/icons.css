@@ -1,0 +1,84 @@
+.icons{
+    display:    flex;
+        align-items:        center;
+        justify-content:    center;
+    position:   relative;
+        top:    -1rem;
+        left:    0;
+}
+
+.allBoxIncons{
+    display:    flex;
+        flex-flow:          row nowrap;
+        -ms-flex-flow:      row nowrap;
+        justify-content:    space-around;
+    width:      100%;
+}
+
+.icons-items{
+    animation:  iconsAnim 2s forwards ease-out;
+    display:    flex;
+        justify-content:    center;
+        align-items:        center;
+    height:     3rem;
+    width:      3rem;
+    visibility: hidden;
+
+}
+.icons-items > i {
+    color:            #0049665d;
+    font-size:      4vmax;
+}
+@keyframes iconsAnim {
+    0%{
+        transform: translateY( 0 );
+        opacity: 0;
+    
+    }    
+    10%{
+        transform: translateY( -4rem );
+        visibility: visible;
+    }    
+    20%{
+        transform: translateY( 0 );
+      
+    }    
+    25%{
+        transform: translateY( -1rem );
+  
+    }    
+    30%{
+        transform: translateY( 0rem );
+        
+    }    
+    35%{
+        transform: translateY( -.3rem );
+        
+    }    
+    100%{
+        transform: translateY( 0rem );
+        opacity: 1;
+        visibility: visible;
+    }    
+    
+}
+.icons-items:nth-child(1){
+    animation-delay: 0s;
+    opacity: 1;
+}
+.icons-items:nth-child(2){
+    animation-delay: .1s;
+  
+}
+.icons-items:nth-child(3){
+    animation-delay: .2s;
+}
+.icons-items:nth-child(4){
+    animation-delay: .3s;
+}
+.icons-items:nth-child(5){
+    animation-delay: .4s;
+}
+.icons-items:nth-child(6){
+    animation-delay: .5s;
+}
