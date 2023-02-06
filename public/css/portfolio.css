@@ -12,7 +12,7 @@
 .large{
     position: relative;
     background:         linear-gradient(10deg, #8edfff 30%, rgba(80, 105, 119, 0) 60%);
-    height:             60vh;  
+    height:             auto;  
     overflow:           hidden;
     z-index:            899;
 }

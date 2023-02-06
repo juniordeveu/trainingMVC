@@ -1,0 +1,114 @@
+.faq-article{
+    display:    flex;
+        -ms-flex:           auto;
+        flex-flow:          column nowrap;
+        -ms-flex-flow:      column nowrap;
+        align-items:        center;
+        justify-content:    center;
+    margin:     0 0 5rem 0;
+    height:     auto;
+   
+}
+.faq-section{
+    display:    flex;
+        -ms-flex:           auto;
+        flex-flow:          row wrap;
+        -ms-flex:           row wrap;
+        justify-content:    space-around;
+    margin-top:     5rem;
+    height:         100%;
+    width:          100%;
+}
+
+.faq-box-left{
+    width:      45%;    
+}
+.faq-box-right{
+    width:      45%;
+}
+
+/* collasible boxes*/
+
+.box-collasible{
+    background-color: #8edfff;
+    border-radius:      .3rem  ;
+    display: flex;
+        flex-flow:      row wrap;
+        justify-content:    space-between;
+        align-items:        center;
+    height:             auto;
+    margin-bottom:      1rem;
+    padding:            2rem;
+    width:              100%;
+
+}
+.changeColor{
+    background-color:   #ff992c;
+    transition:           background-color 1s ease-out; 
+}
+.addShadow{
+   box-shadow:      0px 3px 7px -1px rgba(0, 0, 0, 0.564);
+   
+}
+.arrow{
+    border:         black solid;
+    border-width:     0 .3rem .3rem 0;
+    display:        inline-block;
+    padding:        .3rem;
+    transform:      rotate(135deg);
+}
+.box-collasible-p{
+   margin:        0 0 1rem 0;
+}
+.collasible-content{
+    color: wheat;
+    max-height:         0;
+    overflow:           hidden;
+    transition:         max-height .5s ease-out;
+}
+
+@keyframes arrowAnim {
+    0% { 
+        transform:  rotate(135deg);
+    }
+    100% {
+        transform:  rotate(45deg);
+    }
+}
+.animArrow{
+    animation:      arrowAnim .5s forwards;  
+}
+
+/* end cb */
+
+
+/* media */
+@media all and (min-width: 0px) and (max-width: 1200px) {
+    .faq-section {
+            flex-flow:      column wrap;
+            -ms-flex:       column wrap;    
+        }
+    .faq-box-left {
+        display:            flex;
+            -ms-flex:       auto;
+            -ms-flex-flow:  column wrap;
+            flex-flow:      column;
+            align-items:        center;
+        width:      100%;
+    }
+    .faq-box-right {
+        display:            flex;
+            -ms-flex:       auto;
+            -ms-flex-flow:  column wrap;
+            flex-flow:      column;
+            align-items:    center;
+         width:             100%;
+        }
+        .box-collasible{
+            width:      80%;
+        }
+        .arrow {
+         margin-left: auto;
+           
+        }     
+}
