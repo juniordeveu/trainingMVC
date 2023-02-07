@@ -5,6 +5,7 @@ const { error404 } = require( './controllers/error' );
 /* route */
 const routesPortfolio = require( './routes/portfolio' );
 const routeContact = require( './routes/contacts' );
+const routeShop = require ( './routes/shop' );
 /* end Route */
 
 const bodyParser = require( 'body-parser' );
@@ -23,6 +24,7 @@ app.use( bodyParser.urlencoded({ extended:false }) );
 app.use( routeContact )
 
 app.use( routesPortfolio )
+app.use( routeShop )
 
 app.use( '*', error404)
 
