@@ -1,0 +1,86 @@
+*{
+    box-sizing:     border-box;
+    font-size:      20px;
+    margin:         0;
+    padding:        0;
+}
+
+.container-form{
+    border: 1px solid black;
+    display:        flex;
+        flex-flow:          column nowrap;
+        align-items:        center;
+        height:     auto;
+        width:      100%;
+    margin:     4rem 0;
+
+}
+.container-form__h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 5rem 0;
+
+}
+.card-form{
+    border: 1px solid rgb(199, 0, 0);
+    display:        flex;
+        justify-content:    start;
+    height:         auto;
+    text-align:     center;
+    width:          100%;
+}
+
+.card-form__left{
+    background-color: rgb(205, 243, 253);
+    padding: 0 0 0 2rem;
+    width:          50%;
+    
+}
+.card-form__right{
+    border: 2px solid rgb(0, 63, 199); 
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width:          50%;
+}
+
+/* form */
+label {
+color: blueviolet;
+padding: 1rem 0 .5rem 0;
+}
+.form-control{
+
+    display: flex;
+        flex-flow: column wrap;
+        align-items: start;
+}
+.form-btn{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.431);
+    border-radius: .5rem;
+
+    margin: 1rem 0;
+    padding: .5rem;
+    transition: 1s linear;
+}
+.form-btn:hover{
+   background-color: rgb(130, 130, 130);
+    box-shadow: 0px 4px 10px -3px black;
+    color: aliceblue;
+}
+input[type="text"], textarea{
+    border: 1px solid rgba(0, 157, 255, 0.363);
+    border-radius: .3rem;
+    color: orangered;
+    padding: .5rem;
+    transition: .5s linear;
+    width: 50%;
+
+}
+input[type="text"]:hover,
+textarea:hover{
+    background-color: rgb(214, 236, 255);
+    box-shadow: 0px 4px 10px -3px black;  
+    transform: scale(1.1); 
+}
