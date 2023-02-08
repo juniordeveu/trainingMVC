@@ -2,7 +2,8 @@ const Product = require ( '../models/products' )
 
 let addProduct = ( req, res ) => {
     res.render( 'addProduct.ejs', 
-                {titlePage:'Add Product'} 
+                {titlePage:'Add Product',
+                path:'/admin/addproduct'} 
                 );
     return res.end();
 }

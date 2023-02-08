@@ -25,6 +25,13 @@ font-family: 'Unbounded', cursive;
     margin:         0;
     padding:        0;
 }
+.nav-list__items a:hover,
+.nav-list__items a:active{
+    color: rgb(103, 3, 216);
+}
+a.active{
+    color: rgb(103, 3, 216);
+}
 /* menu */
 .container-menu{
     display:    flex;
