@@ -1,4 +1,9 @@
-const products = [];
+const fs = require ( 'fs' );
+const { dirname } = require('path');
+const path = require('path');
+
+
+
 
 class Product {
     constructor (name , title, price, description) {
@@ -9,12 +14,27 @@ class Product {
     }
 
     save() {
-        products.push( this );
-        console.log( products );
+        const getPath = path.join(path.dirname(require.main.filename), 'data', 'product.json');
+        fs.readFile( getPath, ( err, contentFile ) =>{
+            let products = [];
+            if ( !err ) {
+                products = JSON.parse(contentFile)
+            }
+            products.push(this)
+            fs.writeFile(getPath, JSON.stringify(products), ( err ) => {
+                console.log( " ERROR => ", err, "<= END ERROR")
+            })
+        } );
     }
 
-    static fetchAll() {
-        return products;
+    static fetchAll( cb ) {
+        const getPath = path.join( path.dirname( require.main.filename ), 'data', 'product.json');
+        fs.readFile(getPath, (err, fileContent) => {
+            if (err) {
+                cb( [] )
+            }
+            cb( JSON.parse( fileContent ) );
+        })
     }
 }
 module.exports = Product
