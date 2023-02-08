@@ -10,7 +10,6 @@ fs.readFile( getPathCount, ( err, actualNumber ) => {
 
 let couting = 0
 let sumVisits = [];
-
 let portfolio = ( req, res ) => {
     if ( req.url == '/' ) {
         fs.readFile( getPathCount, ( err, contentCount ) => {
