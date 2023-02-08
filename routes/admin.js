@@ -1,9 +1,11 @@
 const express = require( 'express' );
 const route = express.Router();
-const { addProduct, postProduct } = require( '../controllers/addProduct' )
+const { addProduct, postProduct , editproduct, productInadmin} = require( '../controllers/admin' )
 
 
-route.get( '/addproduct', addProduct );
+route.get( '/admin/addproduct', addProduct );
+route.get( '/admin/editproduct', editproduct );
+route.get( '/admin/productadmin', productInadmin );
 
 route.post( '/product', postProduct ) 
 
