@@ -24,7 +24,9 @@
                         <%= item.description %>
                     </p>
                     <div class="card-action">
-                        <button class="card__action--btn">add to cart</button>
+                        <form action="/addtocart" method="POST">
+                            <button class="card__action--btn" type="submit">add to cart</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,44 @@
 <%- include('../includes/head.ejs') %>
-<title><%= titlePage %></title>
+<link rel="stylesheet" href="/css/shop.css">
+<title><%= titlePage%></title>
 <%- include('../includes/menu.ejs')%>
-    
+<main>
+    <% if (onPage.length > 0) { %>
+        <% for (let item of onPage ) { %>
+        <section class="container-shop">
+            <div class="card-product">
+                <header class="card-header">
+                    <h1 class="card-header__h1">
+                        <%= item.name %>
+                    </h1>
+                </header>
+                <div class="card-img">
+                    <img src="<%= item.imageurl %>" alt="">
+                </div>
+                <div class="card-content">
+                    <h2 class="product-price">
+                      <%= item.price %> PLN
+                    </h2>
+                    <p class="product-description__p1">Opis</p>
+                    <p class="product-description__p2">
+                        <%= item.description %>
+                    </p>
+                    <div class="card-action">
+                        <button class="card__action--btn">
+                            <a href="/admin/editproduct">Edit</a>
+                        </button>
+                        <form action="/admin/deleteproduct" method="POST">
+                            <button class="card__action--btn" type="submit">Delete</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% } %>
+    <% } else { %>
+        <h1>out of stock</h1>
+    <% } %>
+</main>
 
 <%- include('../includes/end.ejs')%>
-
