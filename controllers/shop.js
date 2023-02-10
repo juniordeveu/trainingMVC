@@ -3,21 +3,27 @@ const Product = require ( '../models/products' );
 
 let cart = ( req, res ) => {
     res.render( 'shop/cart.ejs', {
-        titlePage:'Your cart',
+        titlePage: 'Your cart',
     } );
     return res.end();
 }
 
 let checkout = ( req, res ) => {
     res.render( 'shop/checkout.ejs',{
-        titlePage:'CheckOut',
+        titlePage: 'CheckOut',
     } );
     return res.end();
 }
 
 let productslist = ( req, res ) => {
-    res.render( 'shop/product-list.ejs' );
-    return res.end();
+    Product.fetchAll( ( products ) => {
+        res.render( 'shop/product-list.ejs',
+        {
+            titlePage: 'product list',
+            onPage: products,   
+        } );       
+        return res.end();
+    });
 }
 let productdetails = ( req, res ) => {
     res.render( 'shop/product-details.ejs' );
@@ -25,10 +31,10 @@ let productdetails = ( req, res ) => {
 }
 
 let shop = ( req, res) => {
-    Product.fetchAll( (products)=>{
+    Product.fetchAll( ( products ) => {
         res.render( 'shop/product-list.ejs',
         {
-            titlePage:'All products',
+            titlePage: 'All products',
             onPage: products,   
         } );       
         return res.end();
@@ -37,7 +43,7 @@ let shop = ( req, res) => {
 }
 
 let getIndex = (req, res, next) =>{
-    Product.fetchAll( (products)=>{
+    Product.fetchAll( ( products ) => {
         res.render( 'shop/index.ejs',
         {
             titlePage:'shop',

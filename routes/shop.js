@@ -5,7 +5,7 @@ const { shop, cart, checkout, productslist, productdetails, getIndex } = require
 
 route.get( '/shop', shop ); 
 route.get( '/getindex', getIndex ); 
-route.get( '/products', productslist ); 
+route.get( '/productslist', productslist ); 
 route.get( '/productdetails', productdetails ); 
 
 route.get( '/cart', cart  )

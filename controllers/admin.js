@@ -25,8 +25,8 @@ let productInadmin = ( req, res ) => {
 
 
 let postProduct = ( req, res ) => {
-    let { name_product , title_product, price_product, description_product } = req.body 
-    const product = new Product( name_product, title_product, price_product, description_product );
+    let { name_product , imageurl,  title_product, price_product, description_product } = req.body 
+    const product = new Product( name_product, imageurl, title_product, price_product, description_product );
     product.save();
     res.redirect( '/shop' );
 }

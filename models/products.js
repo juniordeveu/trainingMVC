@@ -16,11 +16,12 @@ const getProductFromFile = cb => {
 
 
 class Product {
-    constructor (name , title, price, description) {
-        this.name = name,
-        this.title = title,
-        this.price = price,
-        this.description = description
+    constructor (name, imageurl , title, price, description) {
+        this.name        =     name,
+        this.imageurl    =     imageurl,
+        this.title       =     title,
+        this.price       =     price,
+        this.description =     description
     }
 
     save() {
