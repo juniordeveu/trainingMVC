@@ -1,7 +1,7 @@
 
 let getElementCollasible = document.getElementsByClassName( 'box-collasible')
 
-for( let i = 0; i < getElementCollasible.length; i++){
+for( let i = 0; i < getElementCollasible.length; i++ ) {
     getElementCollasible[i].addEventListener( "click", function() {
         let arrow = document.querySelectorAll( ".arrow" );
         let boxShadow = document.querySelectorAll( ".box-collasible" )

@@ -7,6 +7,12 @@ let cart = ( req, res ) => {
     } );
     return res.end();
 }
+let orders = ( req, res ) => {
+    res.render( 'shop/orders.ejs', {
+        titlePage: 'Your cart',
+    } );
+    return res.end();
+}
 
 let checkout = ( req, res ) => {
     res.render( 'shop/checkout.ejs',{
@@ -39,7 +45,6 @@ let shop = ( req, res) => {
         } );       
         return res.end();
     });
-
 }
 
 let getIndex = (req, res, next) =>{
@@ -57,6 +62,7 @@ let getIndex = (req, res, next) =>{
 module.exports = {
     shop,
     cart,
+    orders,
     checkout,
     productslist,
     productdetails,

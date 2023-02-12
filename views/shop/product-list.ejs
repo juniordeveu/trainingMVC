@@ -11,6 +11,9 @@
                     <h1 class="card-header__h1">
                         <%= item.name %>
                     </h1>
+                    <p class="card-header__id">
+                       ID product: <%= item.idProduct %>
+                    </p>
                 </header>
                 <div class="card-img">
                     <img src="<%= item.imageurl %>" alt="">
@@ -24,6 +27,8 @@
                         <%= item.description %>
                     </p>
                     <div class="card-action">
+                        
+                        <a href="/products/<%= item.idProduct %>" class="btn-details">Details</a>
                         <form action="/addtocart" method="POST">
                             <button class="card__action--btn" type="submit">add to cart</button>
                         </form>

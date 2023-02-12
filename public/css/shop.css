@@ -27,7 +27,11 @@ display:    flex;
 }
 .card-header{
 color:      rgb(183, 255, 0);
-padding:      1rem;
+padding:      .5rem;
+}
+.card-header__id{
+    color: rgb(255, 251, 0);
+    font-size: .5rem;
 }
 .card-img img{
     background-position:     center center;
@@ -59,6 +63,7 @@ padding:      1rem;
 }
 .card-action{
     display:  flex;
+        flex-flow: column wrap;
         justify-content:    center;
         align-items:        center;
     padding:        1rem;
