@@ -6,7 +6,10 @@ const { shop, cart, orders, checkout, productslist, productdetails, getIndex } =
 route.get( '/shop', shop ); 
 route.get( '/getindex', getIndex ); 
 route.get( '/productslist', productslist ); 
-route.get( '/productdetails', productdetails ); 
+
+
+route.get( '/products/:idProduct', productdetails ); 
+
 
 route.get( '/cart', cart  )
 route.get( '/orders', orders  )

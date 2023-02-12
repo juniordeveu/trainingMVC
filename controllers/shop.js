@@ -32,8 +32,15 @@ let productslist = ( req, res ) => {
     });
 }
 let productdetails = ( req, res ) => {
-    res.render( 'shop/product-details.ejs' );
+    const prodID = req.params.idProduct;
+    Product.findById( prodID, product => {
+        res.render( 'shop/product-details.ejs', 
+                    {   onPageId : prodID,
+                        onPageProduct  : product   
+                    } );
     return res.end();
+    } )
+  
 }
 
 let shop = ( req, res) => {
