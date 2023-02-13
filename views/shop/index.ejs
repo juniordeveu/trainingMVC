@@ -25,7 +25,11 @@
                         <%= item.description %>
                     </p>
                     <div class="card-action">
-                        <button class="card__action--btn">add to cart</button>
+                        <form action="/cart" method="POST">
+                            <button class="btn-cart" type="submit">Add to cart</button>
+                            <input type="hidden" name="idProduct" value="<%= item.idProduct %>">
+                        </form>
+                        
                     </div>
                 </div>
             </div>

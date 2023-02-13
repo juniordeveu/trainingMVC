@@ -23,10 +23,10 @@ app.use( express.static( path.join( __dirname, 'public' ) ));
 app.use( bodyParser.urlencoded({ extended:false }) );
 
 app.use( '/admin', routeaddProduct )
-app.use( routeContact );
 app.use( routeShop );
 app.use( routeaddProduct );
 app.use( routesPortfolio );
+app.use( routeContact );
 app.use( '*', error404 );
 
 

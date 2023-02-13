@@ -1,11 +1,20 @@
 const Product = require ( '../models/products' );
-
+const Cart = require ( '../models/cart' );
 
 let cart = ( req, res ) => {
     res.render( 'shop/cart.ejs', {
         titlePage: 'Your cart',
     } );
     return res.end();
+}
+
+let postCart = ( req, res ) => {
+    const { idProduct } = req.body
+    Product.findById( idProduct, ( products ) => {
+        Cart.addProduct( idProduct, products.price )
+    } )
+    res.redirect( '/cart' );
+    res.end();
 }
 let orders = ( req, res ) => {
     res.render( 'shop/orders.ejs', {
@@ -69,6 +78,7 @@ let getIndex = (req, res, next) =>{
 module.exports = {
     shop,
     cart,
+    postCart,
     orders,
     checkout,
     productslist,
