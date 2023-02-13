@@ -5,13 +5,17 @@
         <div class="container-details">
             <div class="card-details">
                 <div class="img-details">
-                    <img src="<%= onPageProduct.imageurl%>" alt="">
+                    <img src="<%= onPageProduct.imageurl %>" alt="<%= onPageProduct.title %>"">
                 </div>
-
+                <div class="card-header">
+                    <h1><%= onPageProduct.title %></h1>
+                </div>
                 <div class="content-details">
-                    <h1><%= onPageProduct.title%></h1>
+                    <h1><%= onPageProduct.price %> PLN</h1>
+
                     <p>
                         <%= onPageProduct.description %>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati similique fugiat perspiciatis nostrum dicta at sunt, ipsam soluta! Nesciunt recusandae possimus, quod ab nulla reprehenderit quia ipsam eligendi atque?
                     </p>
                 </div>
             </div>
