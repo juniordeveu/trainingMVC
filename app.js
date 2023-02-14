@@ -24,7 +24,6 @@ app.use( bodyParser.urlencoded({ extended:false }) );
 
 app.use( '/admin', routeaddProduct )
 app.use( routeShop );
-app.use( routeaddProduct );
 app.use( routesPortfolio );
 app.use( routeContact );
 app.use( '*', error404 );

@@ -16,7 +16,8 @@ const getProductFromFile = cb => {
 
 
 class Product {
-    constructor (name, imageurl , title, price, description) {
+    constructor ( idProduct ,name, imageurl , title, price, description ) {
+        this.idProduct   =   idProduct
         this.name        =     name,
         this.imageurl    =     imageurl,
         this.title       =     title,
@@ -25,12 +26,25 @@ class Product {
     }
 
     save() {
-        this.idProduct = Math.floor( Math.random () * 7777 ).toString()
+        
         getProductFromFile( products => {
-            products.push( this );
-            fs.writeFile(getPath, JSON.stringify( products ), err => {
-                console.log(err)
-            })
+            if (this.idProduct) {
+                const existingProductIndex = products.findById( prod => prod.id === this.idProduct );
+                const updatePrduct = [...products]
+                updatePrduct[existingProductIndex] = this;
+
+                fs.writeFile(getPath, JSON.stringify( updatePrduct ), err => {
+                    console.log(err)
+                })
+            } else {
+                
+                this.idProduct = Math.floor( Math.random () * 7777 ).toString();
+                products.push( this );
+                fs.writeFile(getPath, JSON.stringify( products ), err => {
+                    console.log(err)
+                })
+            }
+         
         } )
 
     }
